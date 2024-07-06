@@ -24,12 +24,12 @@ async function hashPassword(password) {
         // Définition du coût mémoire pour Argon2 (100 MiB)
         const memoryCost = 102400; // 100 MiB (100 * 1024)
         
-        // Hasher le mot de passe avec les paramètres définis
+        // Hasher le mot de passe avec les paramètres définis, y compris parallelism à 3
         const hash = await argon2.hash(password, {
             type: argon2.argon2id, // Utilisation du type Argon2id pour plus de sécurité
             memoryCost: memoryCost, // Coût mémoire
             timeCost: 4, // Coût temporel
-            parallelism: 1, // Niveau de parallélisme
+            parallelism: 3, // Niveau de parallélisme
         });
         return hash;
     } catch (err) {
