@@ -1,0 +1,15 @@
+{
+  "name": "flyffy-argon2",
+  "version": "1.2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Potite_Bulle",
+  "license": "ISC",
+  "description": "Générateur de mot de passe sécurisé en utilisant l'algorithme de hachage Argon2.",
+  "dependencies": {
+    "argon2": "^0.40.3"
+  }
+}
